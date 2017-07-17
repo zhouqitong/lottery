@@ -8838,7 +8838,7 @@
 	        _this.play_list = new Map();
 	        _this.number = new Set();
 	        _this.issue_el = "#curr_issue";
-	        _this.countdown_el = "#countdonw";
+	        _this.countdown_el = "#countdown";
 	        _this.state_el = '.state_el';
 	        _this.cart_el = '.codelist';
 	        _this.omit_el = '';
@@ -9218,9 +9218,7 @@
 	            var count = 0;
 	            (0, _jquery2.default)('.codelist li').each(function (index, item) {
 	                count += (0, _jquery2.default)(item).attr('count') * 1;
-	                console.log((0, _jquery2.default)(item).attr('count'));
 	            });
-	            console.log(count);
 	            (0, _jquery2.default)('#count').text(count);
 	            (0, _jquery2.default)('#money').text(count * 2);
 	        }
@@ -19198,7 +19196,6 @@
 	            var exist = this.play_list.has(play_name);
 	            var arr = new Array(active).fill('0');
 	            if (exist && play_name.at(0) === 'r') {
-	                console.log("sss" + play_name.split('')[1]);
 	                count = Calculate.combine(arr, play_name.split('')[1]).length;
 	            }
 	            return count;

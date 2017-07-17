@@ -236,9 +236,7 @@ class Base {
         let count = 0;
         $('.codelist li').each(function (index, item) {
             count += $(item).attr('count') * 1;
-            console.log($(item).attr('count'));
         });
-        console.log(count);
         $('#count').text(count);
         $('#money').text(count * 2);
     }
